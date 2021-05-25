@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Searcherlook Home</title>
+    <link rel="icon" type="x-icon/images" href="../images/searcherlook.png" sizes="16x16">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Google Fonts Links -->
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=KoHo:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+
+    <!-- Firebase Links -->
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+    <!-- link css in html -->
+    <link rel="stylesheet" href="../styles/user.css">
+</head>
+
+<body id="stay">
+    <h3 class="btn btn-default heading">Welcome! <span id="name"></span></h3>
+    <div class="fill">
+        <!-- Navigation bar -->
+        <div class="options_nav">
+            <a href="#stay">
+                <button onclick="home();" class="btn btn-default"><i class="fa fa-home">&nbsp;</i> Home</button>
+            </a>
+            <hr>
+            <button onclick="profile();" class="btn btn-default"><i class="fa fa-user">&nbsp;</i> Profile</button>
+            <hr>
+            <button onclick="chatRoom();" class="btn btn-default"><i class="fa fa-commenting-o">&nbsp;</i> Chat Room</button>
+            <hr>
+            <button onclick="createChat();" class="btn btn-default"><i class="fa fa-commenting">&nbsp;</i> Create Chat</button>
+            <hr>
+            <button onclick="videoChat();" class="btn btn-default"><i class="fa fa-video-camera">&nbsp;</i> Video Chat</button>
+            <hr>
+            <a href="mailto:support@searcherlook.com">
+                <button class="btn btn-default"><i class="fa fa-envelope">&nbsp;</i> Emails</button>
+            </a>
+            <hr>
+            <button onclick="about();" class="btn btn-default"><i class="fa fa-info">&nbsp;</i> About</button>
+            <hr>
+        </div>
+
+        <!-- Display profile on right side -->
+        <div class="profile">
+            <center>
+                <img src="/images/searcherlook.png">
+                <h3 class="text-info"><b>Profile</b></h3>
+                <hr>
+                <img src="/images/avatar.png" class="user_img" />
+                <div class="left-display">
+                    <h4>Name: <span id="user_name"></span></h4>
+                    <h4>Username: <span id="given_name"></span></h4>
+                    <h4>Room name: <span id="room_name"></span></h4>
+                    <div hidden id="user-pic"></div>
+                    <div hidden id="user-name"></div>
+                </div>
+                <a class="btn btn-primary" href="profile.html" target="_blank">
+                    Go to your main profile 
+                    <i class="fa fa-arrow-up"></i>
+                </a>
+                <br><br>
+                <button onclick="logout();" class="btn btn-default logout"><i class="fa fa-sign-out">&nbsp;</i> Logout</button>
+                <hr>
+                <p>It says that a verified badge means “that Searcherlook has confirmed that this is the authentic account for the public figure, celebrity or global brand it represents.” “To request a verified badge, you must be a public figure, celebrity
+                    or brand and meet certain account and eligibility requirements. <br> <b>But now is free for all</b></p>
+            </center>
+        </div>
+
+        <!-- Middle World Chats -->
+        <center>
+            <div class="chat-lists" id="chats-lists">
+                <h3>Chats</h3>
+                <hr>
+                <div id="output" style="text-align: left;margin-bottom: 70px;"> No chats are available </div>
+                <br><br>
+
+                <div class="input_div_message_page">
+                    <input type="text" id="msg" class="form-control" placeholder="Write your message here...">
+                    <img onclick="send()" src="https://img.icons8.com/nolan/64/filled-sent.png" />
+                </div>
+            </div>
+        </center>
+
+    </div>
+
+    <script type="text/javascript" src="../scripts/user.js"></script>
+</body>
+
+</html>

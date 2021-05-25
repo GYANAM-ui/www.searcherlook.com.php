@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Searcherlook</title>
+    <link rel="icon" type="x-icon/images" href="/images/searcherlook.png" sizes="16x16">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Google Fonts Links -->
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=KoHo:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+
+    <!-- link css in html -->
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+
+<body>
+    <center>
+        <h3 class="btn btn-default heading">Hey Welcome!
+            <h4 class="text-success">Login below</h4>
+        </h3>
+    </center>
+    <!-- Creating a logo image -->
+
+    <center><img title="Searcherlook" src="/images/searcherlook.png" class="img-responsive"></center>
+
+    <!-- login div tags -->
+    <center>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-11 login_div">
+            <br>
+            <div class="form-group">
+                <h3><img src="/images/searcherlook.png" class="logo"> Login</h3>
+                <label>Enter name</label>
+                <input type="text" class="form-control" placeholder="Enter your name..." id="user_name">
+                <span id="er1" style="color: red;"></span><br>
+                <label>Enter room name</label>
+                <input type="text" class="form-control" placeholder="Enter room name..." id="room_name">
+                <span id="er2" style="color: red;"></span>
+                <br><br>
+                <div id="buttonLoad" class="btn btn-success" onclick="getStarted();"><i id="hideElement" class="fa fa-spinner fa-spin"></i>Login and Enter</div>
+                <button hidden id="sign-in" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white">
+                    <i class="material-icons">account_circle</i>Sign-in with Google
+                  </button>
+            </div>
+            <br>
+        </div>
+
+        <!-- Secured by Firebase and Powered by ProVid -->
+        <h4 id="foot">Secured by Google Firebase <img src="/images/firebase.png" class="secured-image" /></h4>
+        <h4 id="foot">Powered by ProVid <img src="/images/facetime.png" class="secured-image" /> </h4>
+
+        <!-- Adding developed by GYANAM GOGOI -->
+        <div class="text-capitalize copy_right">
+            developed by <b>GYANAM GOGOI</b>
+        </div>
+    </center>
+
+    <script type="text/javascript" src="/scripts/main.js"></script>
+</body>
+
+</html>
